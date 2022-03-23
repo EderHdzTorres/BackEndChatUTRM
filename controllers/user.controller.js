@@ -27,6 +27,7 @@ class UserController {
             });
         }
     }
+
     async getUsers(request, response) {
         const body = request.body;
         const users = await UserModel.findAll({
