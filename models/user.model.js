@@ -5,47 +5,32 @@ export class UserModel extends Model {}
 
 UserModel.init( 
 {
-     id: {
-         type: DataTypes.INTEGER.UNSIGNED,
-         primaryKey: true,
-         autoIncrement: true
-        },
-     username:{
-         type: DataTypes.STRING
-        },
-     password: {
-         type: DataTypes.STRING
-        },
-    name:
-        {
-        type: DataTypes.STRING
-        },
-     idlevel: {
-        type: DataTypes.INTEGER
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        comment: "null",
+        autoIncrement: true
     },
-     email: {
-        type: DataTypes.STRING
+    username: {
+        type: DataTypes.STRING(25),
+        allowNull: true
     },
-    last_access: {
-        type: DataTypes.STRING
+    password: {
+        type: DataTypes.STRING(15),
+        allowNull: true
     },
-    status: {
-        type: DataTypes.INTEGER
+    socket_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true
     },
-    attempts: {
-        type: DataTypes.INTEGER
+    online: {
+        type: DataTypes.INTEGER,
+        allowNull: true
     },
-    setpass: {
-        type: DataTypes.STRING
-    },
-    Lang: {
-        type: DataTypes.STRING
-    },
-    created_at: {
-        type: DataTypes.STRING
-    },
-    updated_at: {
-        type: DataTypes.STRING
+    avatar: {
+        type: DataTypes.STRING(255),
+        allowNull: true
     }
 },
 {
