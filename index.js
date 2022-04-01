@@ -1,7 +1,7 @@
 import App from './config/app.js';
 
-const port = process.env.APP_PORT || 8081;
+// Puerto de escucha para la app
+const port = process.env.APP_PORT || 8081; // default port to listen
 
-//App.app.listen(port,() => console.log(`API is running. port: ${port}`));
-
-App.Http.listen(port, () => console.log(`API is running. port: ${port}`));
+// Inicializa la app
+App.http.listen(port, () => console.log(`API is running. port: ${port}`));
